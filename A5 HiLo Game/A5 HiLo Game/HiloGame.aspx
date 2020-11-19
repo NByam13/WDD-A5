@@ -3,10 +3,12 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+<%-- Tell the program the title of the page --%>
 <head runat="server">
     <title>HiLo Game</title>
 </head>
 <body>
+    <%-- Create a for that will be run at the server --%>
     <form id="form1" runat="server">
       <p id="Gamegreeting" runat="server"></p>
         <div>
