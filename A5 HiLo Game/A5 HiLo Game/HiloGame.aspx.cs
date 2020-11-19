@@ -26,7 +26,7 @@ namespace A5_HiLo_Game
                 Response.Cookies.Add(rndNumCookie);
             }
         }
-
+        
         protected void choiceCheck_Click(object sender, EventArgs e)
         {
             string guess = ChoiceBox.Text;
