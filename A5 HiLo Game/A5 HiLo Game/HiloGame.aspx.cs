@@ -16,9 +16,9 @@ namespace A5_HiLo_Game
             HttpCookie max = Request.Cookies.Get("maxNum");
             HttpCookie min = Request.Cookies.Get("minNum");
             HttpCookie username = Request.Cookies.Get("Username");
-            Gamegreeting.InnerHtml = "Hello there " + username.Value + "! Please choose a number between "+ min.Value + " and " + max.Value + "!";
+            Gamegreeting.InnerHtml = "Hello there " + username.Value + "! Please choose a number between " + min.Value + " and " + max.Value + "!";
 
-            if(!Page.IsPostBack) // if this is the first time getting to this page, set the random number.
+            if (!Page.IsPostBack) // if this is the first time getting to this page, set the random number.
             {
                 HttpCookie rndNumCookie = new HttpCookie("rndNum");
                 int rndNum = rnd.Next(1, Int32.Parse(max.Value) + 1);
@@ -34,6 +34,7 @@ namespace A5_HiLo_Game
             string cookieRnd = Request.Cookies.Get("rndNum").Value;
             int maxNum = Int32.Parse(Request.Cookies.Get("maxNum").Value);
             int minNum = Int32.Parse(Request.Cookies.Get("minNum").Value);
+            HttpCookie username = Request.Cookies.Get("Username");
 
             Regex reg = new Regex(pattern);
             if(reg.IsMatch(guess))
@@ -49,11 +50,17 @@ namespace A5_HiLo_Game
                 }
                 else if((guessNum<randomNum) && (guessNum>=minNum))
                 {
-                    min.Value =(guessNum+1).ToString();
+                    Response.Cookies.Remove("minNum");
+                    HttpCookie newMin = new HttpCookie("minNum");
+                    newMin.Value = (guessNum + 1).ToString();
+                    Response.Cookies.Add(newMin);
                 }
                 else if ((guessNum > randomNum) && (guessNum <= maxNum))
                 {
-                    max.Value= (guessNum - 1).ToString();
+                    Response.Cookies.Remove("maxNum");
+                    HttpCookie newMax = new HttpCookie("maxNum");
+                    newMax.Value = (guessNum - 1).ToString();
+                    Response.Cookies.Add(newMax);
                 }
                 else
                 {
