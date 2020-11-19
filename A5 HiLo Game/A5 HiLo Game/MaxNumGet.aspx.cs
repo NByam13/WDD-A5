@@ -18,8 +18,11 @@ namespace A5_HiLo_Game
         protected void Enter1_Click(object sender, EventArgs e)
         {
             HttpCookie max = new HttpCookie("maxNum");
+            HttpCookie min = new HttpCookie("minNum");
             max.Value = maxNum.Text;
+            min.Value = "1";
             Response.Cookies.Add(max);
+            Response.Cookies.Add(min);
             Response.Redirect("./HiloGame.aspx");
         }
     }

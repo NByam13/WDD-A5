@@ -7,8 +7,8 @@
     <title></title>
 </head>
 <body>
-    <p id="Gamegreeting" runat="server"></p>
     <form id="form1" runat="server">
+      <p id="Gamegreeting" runat="server"></p>
         <div>
             <asp:TextBox ID="ChoiceBox" runat="server"></asp:TextBox>
             <asp:Button ID="choiceCheck" runat="server" Text="Make a Guess!" Width="159px" />
