@@ -16,6 +16,14 @@ namespace A5_HiLo_Game
             HttpCookie min = Request.Cookies.Get("minNum");
             HttpCookie username = Request.Cookies.Get("Username");
             Gamegreeting.InnerHtml = "Hello there " + username.Value + "! Please choose a number between "+ min.Value + " and " + max.Value + "!";
+
+            if(!Page.IsPostBack) // if this is the first time getting to this page, set the random number.
+            {
+                HttpCookie rndNumCookie = new HttpCookie("rndNum");
+                int rndNum = rnd.Next(1, Int32.Parse(max.Value) + 1);
+                rndNumCookie.Value = rndNum.ToString();
+                Response.Cookies.Add(rndNumCookie);
+            }
         }
 
         protected void choiceCheck_Click(object sender, EventArgs e)
