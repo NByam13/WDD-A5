@@ -20,7 +20,7 @@ namespace A5_HiLo_Game
 
         protected void choiceCheck_Click(object sender, EventArgs e)
         {
-
+            string guess = ChoiceBox.Text;
         }
 
         protected void ChoiceBox_TextChanged(object sender, EventArgs e)
