@@ -20,7 +20,7 @@ namespace A5_HiLo_Game
             rangeCheck1.MinimumValue = min.Value;
             Gamegreeting.InnerHtml = "Hello there " + username.Value + "! Please choose a number between "+ min.Value + " and " + max.Value + "!";
 
-            if(!Page.IsPostBack) // if this is the first time getting to this page, set the random number.
+            if (!Page.IsPostBack) // if this is the first time getting to this page, set the random number.
             {
                 HttpCookie rndNumCookie = new HttpCookie("rndNum");
                 int rndNum = rnd.Next(1, Int32.Parse(max.Value) + 1);
@@ -28,7 +28,7 @@ namespace A5_HiLo_Game
                 Response.Cookies.Add(rndNumCookie);
             }
         }
-        
+
         protected void choiceCheck_Click(object sender, EventArgs e)
         {
             string guess = ChoiceBox.Text;
