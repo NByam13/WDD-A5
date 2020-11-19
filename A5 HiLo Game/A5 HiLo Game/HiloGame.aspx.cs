@@ -30,7 +30,7 @@ namespace A5_HiLo_Game
         protected void choiceCheck_Click(object sender, EventArgs e)
         {
             string guess = ChoiceBox.Text;
-            string pattern = "/$[0-9]+^/";
+            string pattern = "$[0-9]+^";
             string cookieRnd = Request.Cookies.Get("rndNum").Value;
             int maxNum = Int32.Parse(Request.Cookies.Get("maxNum").Value);
             int minNum = Int32.Parse(Request.Cookies.Get("minNum").Value);
