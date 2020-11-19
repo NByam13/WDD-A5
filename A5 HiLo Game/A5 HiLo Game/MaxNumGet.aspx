@@ -7,8 +7,8 @@
     <title></title>
 </head>
 <body>
-    <p>Hi There _______! Please enter a max number!</p>
     <form id="form1" runat="server">
+        <p id="greeting" runat="server"></p>
         <div>
             <asp:TextBox ID="maxNum" runat="server"></asp:TextBox>
               <asp:Button ID="Enter1" runat="server" Text="Enter max number!" OnClick="Enter1_Click" Width="146px" />

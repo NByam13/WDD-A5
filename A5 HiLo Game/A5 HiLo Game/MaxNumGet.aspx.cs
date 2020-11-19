@@ -11,7 +11,8 @@ namespace A5_HiLo_Game
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            HttpCookie username = Request.Cookies.Get("Username");
+            greeting.InnerHtml = "Hello there " + username.Value + "! Please choose a max number greater than 1!";
         }
 
         protected void Enter1_Click(object sender, EventArgs e)
