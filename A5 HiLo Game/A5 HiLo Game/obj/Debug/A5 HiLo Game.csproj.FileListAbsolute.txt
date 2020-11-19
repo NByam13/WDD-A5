@@ -12,3 +12,10 @@ C:\Users\Nick_\Source\Repos\WDD-A5\A5 HiLo Game\A5 HiLo Game\obj\Debug\A5 HiLo G
 C:\Users\Nick_\Source\Repos\WDD-A5\A5 HiLo Game\A5 HiLo Game\obj\Debug\A5 HiLo Game.csproj.CoreCompileInputs.cache
 C:\Users\Nick_\Source\Repos\WDD-A5\A5 HiLo Game\A5 HiLo Game\obj\Debug\A5 HiLo Game.dll
 C:\Users\Nick_\Source\Repos\WDD-A5\A5 HiLo Game\A5 HiLo Game\obj\Debug\A5 HiLo Game.pdb
+C:\Users\risti\Documents\GitHub\WDD-A5\A5 HiLo Game\A5 HiLo Game\bin\A5 HiLo Game.dll.config
+C:\Users\risti\Documents\GitHub\WDD-A5\A5 HiLo Game\A5 HiLo Game\bin\A5 HiLo Game.dll
+C:\Users\risti\Documents\GitHub\WDD-A5\A5 HiLo Game\A5 HiLo Game\bin\A5 HiLo Game.pdb
+C:\Users\risti\Documents\GitHub\WDD-A5\A5 HiLo Game\A5 HiLo Game\obj\Debug\A5 HiLo Game.csprojAssemblyReference.cache
+C:\Users\risti\Documents\GitHub\WDD-A5\A5 HiLo Game\A5 HiLo Game\obj\Debug\A5 HiLo Game.csproj.CoreCompileInputs.cache
+C:\Users\risti\Documents\GitHub\WDD-A5\A5 HiLo Game\A5 HiLo Game\obj\Debug\A5 HiLo Game.dll
+C:\Users\risti\Documents\GitHub\WDD-A5\A5 HiLo Game\A5 HiLo Game\obj\Debug\A5 HiLo Game.pdb
