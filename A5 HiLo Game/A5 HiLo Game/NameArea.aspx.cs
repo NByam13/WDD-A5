@@ -33,9 +33,13 @@ namespace A5_HiLo_Game
         */
         protected void Enter1_Click(object sender, EventArgs e)
         {
+            //create cookie
             HttpCookie cookie = new HttpCookie("username");
+            //place valid name in the cookie
             cookie.Value = Username.Text;
+            //add to the rest of the cookies
             Response.Cookies.Add(cookie);
+            //redirect to next page
             Response.Redirect("MaxNumGet.aspx");
         }
 
