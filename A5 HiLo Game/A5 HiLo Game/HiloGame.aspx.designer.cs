@@ -51,6 +51,15 @@ namespace A5_HiLo_Game
         protected global::System.Web.UI.WebControls.Button choiceCheck;
 
         /// <summary>
+        /// rangeCheck1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rangeCheck1;
+
+        /// <summary>
         /// notEmptyMax control.
         /// </summary>
         /// <remarks>

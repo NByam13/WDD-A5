@@ -16,6 +16,8 @@ namespace A5_HiLo_Game
             HttpCookie max = Request.Cookies.Get("maxNum");
             HttpCookie min = Request.Cookies.Get("minNum");
             HttpCookie username = Request.Cookies.Get("Username");
+            rangeCheck1.MaximumValue = max.Value;
+            rangeCheck1.MinimumValue = min.Value;
             Gamegreeting.InnerHtml = "Hello there " + username.Value + "! Please choose a number between "+ min.Value + " and " + max.Value + "!";
 
             if(!Page.IsPostBack) // if this is the first time getting to this page, set the random number.
@@ -30,40 +32,54 @@ namespace A5_HiLo_Game
         protected void choiceCheck_Click(object sender, EventArgs e)
         {
             string guess = ChoiceBox.Text;
-            string pattern = "/$[0-9]+^/";
             string cookieRnd = Request.Cookies.Get("rndNum").Value;
             int maxNum = Int32.Parse(Request.Cookies.Get("maxNum").Value);
             int minNum = Int32.Parse(Request.Cookies.Get("minNum").Value);
-
-            Regex reg = new Regex(pattern);
-            if(reg.IsMatch(guess))
+            int guessNum = Int32.Parse(guess);
+            int randomNum= Int32.Parse(cookieRnd);
+            if(guessNum<randomNum)
             {
-                int guessNum = Int32.Parse(guess);
-                int randomNum= Int32.Parse(cookieRnd);
-                HttpCookie max = Request.Cookies.Get("maxNum");
-                HttpCookie min = Request.Cookies.Get("minNum");
-
-                if (guessNum==randomNum)
-                {
-
-                }
-                else if((guessNum<randomNum) && (guessNum>=minNum))
-                {
-                    min.Value =(guessNum+1).ToString();
-                }
-                else if ((guessNum > randomNum) && (guessNum <= maxNum))
-                {
-                    max.Value= (guessNum - 1).ToString();
-                }
-                else
-                {
-                    //tell user its invalid
-                }
+                Response.Cookies["minNum"].Value = (guessNum + 1).ToString();
             }
-            else
+            else if (guessNum > randomNum)
             {
-                //tell user its invalid
+                Response.Cookies["maxNum"].Value = (guessNum - 1).ToString();
             }
+            else if(guessNum==randomNum)
+            {
+
+            }
+            //Regex reg = new Regex(pattern);
+            //if(reg.IsMatch(guess)==true)
+            //{
+            //    int guessNum = Int32.Parse(guess);
+            //    int randomNum= Int32.Parse(cookieRnd);
+            //    //HttpCookie max = Request.Cookies.Get("maxNum");
+            //    //HttpCookie min = Request.Cookies.Get("minNum");
+            //    HttpCookie username = Request.Cookies.Get("Username");
+
+            //    if (guessNum==randomNum)
+            //    {
+
+            //    }
+            //    else if((guessNum<randomNum) && (guessNum>=minNum))
+            //    {
+            //        Response.Cookies["minNum"].Value = (guessNum+1).ToString();
+            //    }
+            //    else if ((guessNum > randomNum) && (guessNum <= maxNum))
+            //    {
+            //        Response.Cookies["maxNum"].Value = (guessNum + 1).ToString();
+            //    }
+            //    else
+            //    {
+            //        //tell user its invalid
+            //    }
+            //}
+            //else
+            //{
+            //    //tell user its invalid
+
+            //}
         }
 
         protected void ChoiceBox_TextChanged(object sender, EventArgs e)

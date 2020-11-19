@@ -14,7 +14,13 @@
         <div>
             <asp:TextBox ID="ChoiceBox" runat="server" OnTextChanged="ChoiceBox_TextChanged"></asp:TextBox>
             <asp:Button ID="choiceCheck" runat="server" Text="Make a Guess!" Width="159px" OnClick="choiceCheck_Click" />
-
+             <asp:RangeValidator 
+                  id="rangeCheck1"
+                  ControlToValidate="ChoiceBox" 
+                  Type="Integer"
+                  Text="Sorry, the value entered must be an integer in the range."
+                  ForeColor="red"
+            runat="server" />
         </div>
         <div>
             <asp:RequiredFieldValidator ID="notEmptyMax"
