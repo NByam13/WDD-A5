@@ -57,11 +57,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HiloGame.aspx" />
     <Content Include="MaxNumGet.aspx" />
     <Content Include="NameArea.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HiloGame.aspx.cs">
+      <DependentUpon>HiloGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HiloGame.aspx.designer.cs">
+      <DependentUpon>HiloGame.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MaxNumGet.aspx.cs">
       <DependentUpon>MaxNumGet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

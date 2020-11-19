@@ -17,7 +17,10 @@ namespace A5_HiLo_Game
 
         protected void Enter1_Click(object sender, EventArgs e)
         {
-
+            HttpCookie max = new HttpCookie("maxNum");
+            max.Value = maxNum.Text;
+            Response.Cookies.Add(max);
+            Response.Redirect("./HiloGame.aspx");
         }
     }
 }

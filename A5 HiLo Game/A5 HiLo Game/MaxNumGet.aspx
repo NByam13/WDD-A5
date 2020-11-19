@@ -15,8 +15,15 @@
               <asp:CompareValidator ID="ValMax" 
               runat="server"  Operator="GreaterThanEqual" ControlToValidate ="maxNum"
               Type="Integer" SetFocusOnError="true" 
-              ValueToCompare="2" ErrorMessage="Please enter a valid integer">
-              </asp:CompareValidator>
+              ValueToCompare="2" ErrorMessage="Please enter a valid integer"
+                  ForeColor="Red"/>
+        </div>
+        <div>
+            <asp:RequiredFieldValidator ID="notEmptyMax"
+                runat="server"
+                ControlToValidate="maxNum"
+                ErrorMessage="Please Enter a Number Greater Than 1!" 
+                ForeColor="Red"/>
         </div>
     </form>
 </body>
