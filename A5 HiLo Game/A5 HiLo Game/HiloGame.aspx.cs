@@ -40,14 +40,14 @@ namespace A5_HiLo_Game
                 if (guessNum < randomNum)
                 {
                     Response.Cookies["minNum"].Value = (guessNum + 1).ToString();
-                    minNum = guessNum;
+                    minNum = guessNum+1;
                     Gamegreeting.InnerHtml = "Hello there " + Request.Cookies.Get("Username").Value + "! Please choose a number between " + minNum + " and " + maxNum + "!";
 
                 }
                 else if (guessNum > randomNum)
                 {
                     Response.Cookies["maxNum"].Value = (guessNum - 1).ToString();
-                    maxNum = guessNum;
+                    maxNum = guessNum-1;
                     Gamegreeting.InnerHtml = "Hello there " + Request.Cookies.Get("Username").Value + "! Please choose a number between " + minNum + " and " + maxNum + "!";
                 }
             else if (guessNum == randomNum)
