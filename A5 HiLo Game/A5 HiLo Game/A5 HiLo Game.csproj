@@ -61,6 +61,7 @@
     <Content Include="MaxNumGet.aspx" />
     <Content Include="NameArea.aspx" />
     <Content Include="Web.config" />
+    <Content Include="winPage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HiloGame.aspx.cs">
@@ -85,6 +86,13 @@
       <DependentUpon>NameArea.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="winPage.aspx.cs">
+      <DependentUpon>winPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="winPage.aspx.designer.cs">
+      <DependentUpon>winPage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

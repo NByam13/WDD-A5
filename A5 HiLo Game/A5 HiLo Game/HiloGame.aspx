@@ -9,10 +9,10 @@
 </head>
 <body>
     <!-- Create a for that will be run at the server -->
-    <form id="form1" runat="server">
-      <p id="Gamegreeting" runat="server"></p>
+    <form id="form1" runat="server" >
         <div>
-            <asp:TextBox ID="ChoiceBox" runat="server" OnTextChanged="ChoiceBox_TextChanged"></asp:TextBox>
+             <p id="Gamegreeting" runat="server"></p>
+            <asp:TextBox ID="ChoiceBox" runat="server" OnTextChanged="ChoiceBox_TextChanged" OnInit="ChoiceBox_TextChanged"></asp:TextBox>
             <asp:Button ID="choiceCheck" runat="server" Text="Make a Guess!" Width="159px" OnClick="choiceCheck_Click" />
              <asp:RangeValidator 
                   id="rangeCheck1"
@@ -20,15 +20,14 @@
                   Type="Integer"
                   Text="Sorry, the value entered must be an integer in the range."
                   ForeColor="red"
-            runat="server" />
-        </div>
-        <div>
-            <asp:RequiredFieldValidator ID="notEmptyMax"
+                  runat="server" />
+                    <asp:RequiredFieldValidator ID="notEmptyMax"
                 runat="server"
                 ControlToValidate="ChoiceBox"
                 ErrorMessage="Please Enter a Valid Number!" 
                 ForeColor="Red"/>
         </div>
+
     </form>
 </body>
 </html>
