@@ -12,6 +12,7 @@
 <!-- Tell the program the title of the page -->
 <head runat="server">
     <title>HiLo Game</title>
+    <link href="./Styles/A5styles.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
     <div class="form-container">

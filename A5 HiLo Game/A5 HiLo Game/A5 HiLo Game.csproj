@@ -60,6 +60,7 @@
     <Content Include="HiloGame.aspx" />
     <Content Include="MaxNumGet.aspx" />
     <Content Include="NameArea.aspx" />
+    <Content Include="Styles\A5Styles.css" />
     <Content Include="Web.config" />
     <Content Include="winPage.aspx" />
   </ItemGroup>

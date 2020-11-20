@@ -1,0 +1,38 @@
+/*
+* File          : A4styles.css
+* Project       : Hi-Lo on the server - Assignment 4
+* Programmers   : Nick Byam, Nikola Ristic
+* Last Change   : 2020-11-07
+* Description   : The style page for all 4 of the html and asp pages for the game
+*/
+
+body.win-page{ /*The colour change for the win page*/
+    background-color: orange;
+}
+
+body{ /*The colour for all other pages*/
+    background-color: lightblue;
+}
+
+div.form-container{ /*The style that holds the form in an organized box*/
+    display: block;
+    text-align: center;
+    width: 400px;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.error{ /*The styles for the error messages on invalid input*/
+    color: red;
+    font-weight: bold;
+}
+
+.submit-btn{ /*style to give the submit buttons some padding from the bottom of the div border*/
+    margin-bottom: 10px;
+}
+
+h1{ /*Style to give the heading a little more padding on the bottom to separate the title from the form info*/
+    padding-bottom: 5px;
+}
