@@ -4,14 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>HiLo Game</title>
 </head>
-<body>
-    <form id="form1" runat="server">
-        <p id="winGreeting" runat="server"></p>
-        <div>
+<body id="win">
+    <div id="form-container">
+        <h1>The Hi-Lo Game</h1>
+        <form id="form1" runat="server">
+            <p id="winGreeting" runat="server"></p>
             <asp:Button ID="replay" runat="server" Text="Play Again?" OnClick="replay_Click" />
-        </div>
-    </form>
+        </form>
+    </div>
 </body>
 </html>

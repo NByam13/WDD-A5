@@ -14,12 +14,12 @@
     <title>HiLo Game</title>
 </head>
 <body>
-    <!-- Create a form that will be run at the server -->
-    <form id="form1" runat="server">
-        <!-- Ask the user for input -->
-        <p>Hi There! Please enter a name!</p>
-        <div>
-              <!--  Create a textbox that will be run at the server and allow user input-->
+    <div id="form-container">
+        <!-- Create a form that will be run at the server -->
+        <form id="form1" runat="server">
+            <!-- Ask the user for input -->
+            <p>Hi There! Please enter a name!</p>
+            <!--  Create a textbox that will be run at the server and allow user input-->
               <asp:TextBox ID="Username" runat="server" OnTextChanged="Username_TextChanged" Type="string">
               </asp:TextBox>
               <!--  Create a textbox that will be run at the server and allow the user to press, which will make the program validate the textbox-->
@@ -29,7 +29,7 @@
               runat="server" ControlToValidate ="Username"
               ErrorMessage="Please enter a valid Name!" >
               </asp:RequiredFieldValidator>
-        </div>
-    </form>
+        </form>
+    </div>
 </body>
 </html>
