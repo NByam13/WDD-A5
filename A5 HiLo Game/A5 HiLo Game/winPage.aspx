@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
         <p id="winGreeting" runat="server"></p>
         <div>
-            <asp:Button ID="Button1" runat="server" Text="Play Again?" OnClick="Button1_Click" />
+            <asp:Button ID="replay" runat="server" Text="Play Again?" OnClick="replay_Click" />
         </div>
     </form>
 </body>

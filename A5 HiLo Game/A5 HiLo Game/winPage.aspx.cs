@@ -15,9 +15,18 @@ namespace A5_HiLo_Game
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void replay_Click(object sender, EventArgs e)
         {
+            // reset all cookies
+            foreach(HttpCookie cookie in Response.Cookies)
+            {
+                if(cookie.Name != "username")
+                {
+                    cookie.Value = "";
+                }
+            }
 
+            Response.Redirect("./MaxNumGet.aspx");
         }
     }
 }
