@@ -8,26 +8,28 @@
     <title>HiLo Game</title>
 </head>
 <body>
-    <!-- Create a for that will be run at the server -->
-    <form id="form1" runat="server" >
-        <div>
-             <p id="Gamegreeting" runat="server"></p>
+    <div class="form-container">
+        <!-- Create a for that will be run at the server -->
+        <h1>The Hi-Lo Game</h1>
+        <form id="form3" runat="server" >
+            <p id="Gamegreeting" runat="server"></p>
             <asp:TextBox ID="ChoiceBox" runat="server" OnTextChanged="ChoiceBox_TextChanged" OnInit="ChoiceBox_TextChanged"></asp:TextBox>
-            <asp:Button ID="choiceCheck" runat="server" Text="Make a Guess!" Width="159px" OnClick="choiceCheck_Click" />
-             <asp:RangeValidator 
-                  id="rangeCheck1"
-                  ControlToValidate="ChoiceBox" 
-                  Type="Integer"
-                  Text="Sorry, the value entered must be an integer in the range."
-                  ForeColor="red"
-                  runat="server" />
-                    <asp:RequiredFieldValidator ID="notEmptyMax"
-                runat="server"
-                ControlToValidate="ChoiceBox"
-                ErrorMessage="Please Enter a Valid Number!" 
-                ForeColor="Red"/>
-        </div>
-
+            <asp:Button ID="choiceCheck" runat="server" Text="Make a Guess!" Width="130px" style="height: 25px" OnClick="choiceCheck_Click" />
+            <div class="error">
+                <asp:RangeValidator 
+                    id="rangeCheck1"
+                    ControlToValidate="ChoiceBox" 
+                    Type="Integer"
+                    Text="Sorry, the value entered must be an integer in the range."
+                    ForeColor="red"
+                    runat="server" />
+                <asp:RequiredFieldValidator ID="notEmptyMax"
+                    runat="server"
+                    ControlToValidate="ChoiceBox"
+                    ErrorMessage="Please Enter a Valid Number!" 
+                    ForeColor="Red"/>
+            </div>
     </form>
+    </div>
 </body>
 </html>
