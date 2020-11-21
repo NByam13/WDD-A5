@@ -85,10 +85,5 @@ namespace A5_HiLo_Game
             }
             ChoiceBox.Text = ""; // reset the textbox to empty so that the user doesn't have to delete their old guess.
         }
-
-        protected void ChoiceBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

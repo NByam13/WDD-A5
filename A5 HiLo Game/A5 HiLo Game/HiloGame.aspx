@@ -20,7 +20,7 @@
         <h1>The Hi-Lo Game</h1>
         <form id="form3" runat="server" >
             <p id="Gamegreeting" runat="server"></p>
-            <asp:TextBox ID="ChoiceBox" runat="server" OnTextChanged="ChoiceBox_TextChanged" OnInit="ChoiceBox_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="ChoiceBox" runat="server"></asp:TextBox>
             <asp:Button ID="choiceCheck" runat="server" Text="Make a Guess!" Width="130px" style="height: 25px" OnClick="choiceCheck_Click" />
             <div class="error">
                 <!--Range and required field validators for the user's guess. Range is set in the code behind-->

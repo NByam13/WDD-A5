@@ -22,7 +22,7 @@
             <!-- Ask the user for input -->
             <p>Hi There! Please enter a name!</p>
             <!--  Create a textbox that will be run at the server and allow user input-->
-              <asp:TextBox ID="Username" runat="server" OnTextChanged="Username_TextChanged" Type="string"/>
+              <asp:TextBox ID="Username" runat="server" Type="string"/>
               <!--  Create a textbox that will be run at the server and allow the user to press, which will make the program validate the textbox-->
               <asp:Button ID="Enter1" runat="server" Text="Enter username" OnClick="Enter1_Click" Width="130px" style="height: 25px"/>
               <div class="error">

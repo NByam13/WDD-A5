@@ -52,17 +52,5 @@ namespace A5_HiLo_Game
             //redirect to next page
             Response.Redirect("MaxNumGet.aspx");
         }
-
-        /*
-        Name	: Username_TextChanged
-        Purpose : Sent here any time the text changes
-        Inputs	: sender-Where the function is called from
-                  e- Information the user sends to the function
-        Outputs	: NONE
-        Returns	: Nothing
-        */
-        protected void Username_TextChanged(object sender, EventArgs e)
-        {
-        }
     }
 }
