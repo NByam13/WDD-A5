@@ -1,4 +1,14 @@
-﻿using System;
+﻿//*********************************************
+// File			 : NameArea.aspx.cs
+// Project		 : A5 - HiLo in ASP.NET
+// Programmer	 : Nick Byam, Nikola Ristic
+// Last Change   : 2020-11-20
+// Description	 : Code behind for the NameArea page which gives event handlers instruction on what to do when a button is clicked
+//               : and when the page loads.
+//*********************************************
+
+
+using System;
 using System.Collections.Generic;
 
 using System.Web;
@@ -53,7 +63,6 @@ namespace A5_HiLo_Game
         */
         protected void Username_TextChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

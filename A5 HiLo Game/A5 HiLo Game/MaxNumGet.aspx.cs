@@ -1,6 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿//*********************************************
+// File			 : MaxNumGet.aspx.cs
+// Project		 : A5 - HiLo in ASP.NET
+// Programmer	 : Nick Byam, Nikola Ristic
+// Last Change   : 2020-11-20
+// Description	 : This page details the event handlers for when the page loads, and what happens when the button is clicked.
+//*********************************************
 
+
+using System;
+using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;

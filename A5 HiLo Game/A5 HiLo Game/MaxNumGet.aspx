@@ -11,32 +11,34 @@
 <!-- Tell the program the title of the page -->
 <head runat="server">
     <title>HiLo Game</title>
+    <link href="./Styles/A5styles.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-    <!-- Create a form that will be run at the server -->
-    <form id="form1" runat="server">
-        <!-- Used to display greeting to user and tell them to input a max number -->
-        <p id="greeting" runat="server"></p>
-        <div>
-              <!--  Create a textbox that will be run at the server and allow user input-->
-              <asp:TextBox ID="maxNum" runat="server"></asp:TextBox>
-              <!--  Create a textbox that will be run at the server and allow the user to press, which will make the program validate the textbox-->
-              <asp:Button ID="Enter1" runat="server" Text="Enter max number!" OnClick="Enter1_Click" Width="146px" style="height: 26px" />
-              <!-- CompareValidator is used to determine if the input in the textbox(number in this case) is greater then or equal to 2, and if its not, tell the user its not valid-->
-              <asp:CompareValidator ID="ValMax" 
-              runat="server"  Operator="GreaterThanEqual" ControlToValidate ="maxNum"
-              Type="Integer" SetFocusOnError="true" 
-              ValueToCompare="2" ErrorMessage="Please enter a valid integer"
-                  ForeColor="Red"/>
-        </div>
-        <div>
-            <!-- RequiredFieldValidator is used to determine if the input in the textbox(number in this case) is valid, and if its not, tell the user its not valid-->
-            <asp:RequiredFieldValidator ID="notEmptyMax"
+    <div class="form-container">
+        <h1>The Hi-Lo Game</h1>
+        <!-- Create a form that will be run at the server -->
+        <form id="form2" runat="server">
+            <!-- Used to display greeting to user and tell them to input a max number -->
+            <p id="greeting" runat="server"></p>
+            <!--  Create a textbox that will be run at the server and allow user input-->
+            <asp:TextBox ID="maxNum" runat="server"></asp:TextBox>
+            <!--  Create a textbox that will be run at the server and allow the user to press, which will make the program validate the textbox-->
+            <asp:Button ID="Enter1" runat="server" Text="Enter max number!" OnClick="Enter1_Click" Width="130px" style="height: 25px" />
+            <div class="error">
+                <!-- CompareValidator is used to determine if the input in the textbox(number in this case) is greater then or equal to 2, and if its not, tell the user its not valid-->
+                <asp:CompareValidator ID="ValMax" 
+                runat="server"  Operator="GreaterThanEqual" ControlToValidate ="maxNum"
+                Type="Integer" SetFocusOnError="true" 
+                ValueToCompare="2" ErrorMessage="Please enter a valid integer"
+                ForeColor="Red"/>
+                <!-- RequiredFieldValidator is used to determine if the input in the textbox(number in this case) is valid, and if its not, tell the user its not valid-->
+                <asp:RequiredFieldValidator ID="notEmptyMax"
                 runat="server"
                 ControlToValidate="maxNum"
                 ErrorMessage="Please Enter a Number Greater Than 1!" 
-                ForeColor="Red"/>
-        </div>
-    </form>
+                ForeColor="Red" />
+            </div>
+        </form>
+    </div>
 </body>
 </html>
